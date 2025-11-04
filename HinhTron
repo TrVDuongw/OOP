@@ -1,0 +1,24 @@
+package hinhhoc;
+
+public class HinhTron extends HinhHoc {
+
+    private double banKinh;
+
+    public HinhTron(double banKinh){
+        this.banKinh = banKinh;
+    }
+
+    @Override
+    public double tinhChuVi(){
+        return 2*Math.PI*banKinh;
+    }
+    @Override
+    public double tinhDienTich(){
+        return Math.PI * banKinh*banKinh;
+    }
+    @Override
+    public String toString(){
+        return String.format("Hình Tròn - Bán kính: %.2f, Diện tích: %.2f, Chu vi: %.2f",
+                banKinh, tinhDienTich(), tinhChuVi());
+    }
+}
